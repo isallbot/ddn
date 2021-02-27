@@ -1,5 +1,5 @@
 /*
-]=====> FAISAL WAPI <=====[ ]=====> THENK UDAH ORDER <=====[ ]=====> 089630267618 <=====[
+]=====> RAMLAN ID <=====[ ]=====> YT Ramlan ID <=====[ ]=====> 085559240360 <=====[
 */
 // ANAK ANJING PASTI YANG ATAS DI UBAH
 // NGOTAK KONSOL
@@ -44,11 +44,11 @@ const { nad } = require('./language')
 const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n'
             + 'FN:BOT-ISALL\n' // GANTI NAMA LU
-            + 'ORG:OWNER ISALL GANS;\n'
+            + 'ORG:ISALL GANS;\n'
             + 'TEL;type=CELL;type=VOICE;waid=6289630267618:+62 896-3026-7618\n' // GANTI NOMOR LU
             + 'END:VCARD'
 // UDAH SEGITU KONSOL KEBAWAH BIARIN AJA
-const ngonsol = JSON.parse(fs.readFileSync('./settings/Isall.json'))
+const ngonsol = JSON.parse(fs.readFileSync('./settings/Ramlan.json'))
 const {
     botName,
     ownerName,
@@ -59,7 +59,7 @@ const {
     UserLimitz,
     CeerTod
 } = ngonsol
-// POWERED BY FAISAL WAPI
+// POWERED BY RAMLAN ID
 prefix = botPrefix
 blocked = []   
 limitawal = UserLimitz
@@ -280,14 +280,14 @@ baby.logger.level = 'warn'
 console.log(banner.string)
    baby.on('qr', qr => {
    qrcode.generate(qr, { small: true })
-	console.log(color('[','white'), color('!','red'), color(']','white'), color(' MAKASIH SUDAH BELI BOT ISALL'))
+	console.log(color('[','white'), color('!','red'), color(']','white'), color(' THENK YAA '))
 })
 
 	baby.on('credentials-updated', () => {
-		fs.writeFileSync('./Isall.json', JSON.stringify(baby.base64EncodedAuthInfo(), null, '\t'))
+		fs.writeFileSync('./isall.json', JSON.stringify(baby.base64EncodedAuthInfo(), null, '\t'))
 		info('2', 'ingfokan cuyy...')
 	})
-	fs.existsSync('./Ramlan.json') && baby.loadAuthInfo('./Isall.json')
+	fs.existsSync('./isall.json') && baby.loadAuthInfo('./isall.json')
 	baby.on('connecting', () => {
 		start('2', 'BOT-ISALL Connecting...')
 	})
@@ -676,9 +676,9 @@ switch(command) {
                   if (isBanned) return reply(nad.baned())
 				if (!isRegistered) return reply(nad.noregis())
 				if (isLimit(sender)) return reply(nad.limitend(pusname))
-				if (args.length < 1) return reply(`Teksnya mana kak? Contoh : ${prefix}nulis ISALL baik hati`)
+				if (args.length < 1) return reply(`Teksnya mana kak? Contoh : ${prefix}nulis isall baik hati`)
 				nul = body.slice(7)
-				reply('「❗」WAIT BRO GUE NULIS DULU YAKAN')
+				reply('「❗」WAIT BRO GUE NULIS DUMLU YAKAN')
 				tak = await getBuffer(`https://api.zeks.xyz/api/nulis?text=${nul}&apikey=apivinz`)
 				baby.sendMessage(from, tak, image, {quoted: mek, caption: 'Lebih baik nulis sendiri ya kak :*'})
 					await limitAdd(sender)				
@@ -688,10 +688,10 @@ switch(command) {
                   if (isBanned) return reply(nad.baned())
 				if (!isRegistered) return reply(nad.noregis())
 				if (!isPrem) return reply(nad.premium())
-				if (args.length < 1) return reply(`Teksnya mana kak? Contoh : ${prefix}nulis1 ISALL baik hati`)
-				isall = body.slice(8)
-				reply('「❗」WAIT BRO GUE NULIS DULU YAKAN')
-				buff = await getBuffer(`https://api.xteam.xyz/magernulis2?text=${isall}&APIKEY=${XteamKey}`)
+				if (args.length < 1) return reply(`Teksnya mana kak? Contoh : ${prefix}nulis1 isall baik hati`)
+				ramlan = body.slice(8)
+				reply('「❗」WAIT BRO GUE NULIS DUMLU YAKAN')
+				buff = await getBuffer(`https://api.xteam.xyz/magernulis2?text=${ramlan}&APIKEY=${XteamKey}`)
 				baby.sendMessage(from, buff, image, {quoted: mek, caption: 'Lebih baik nulis sendiri ya kak :*'})
 				break
 				case 'nulis2':
@@ -699,9 +699,9 @@ switch(command) {
                   if (isBanned) return reply(nad.baned())
 				if (!isRegistered) return reply(nad.noregis())
 				if (!isPrem) return reply(nad.premium())
-				if (args.length < 1) return reply(`Teksnya mana kak? Contoh : ${prefix}nulis2 ISALL baik hati`)
+				if (args.length < 1) return reply(`Teksnya mana kak? Contoh : ${prefix}nulis2 isall baik hati`)
 				laysha = body.slice(8)
-				reply('「❗」WAIT BRO GUE NULIS DULU YAKAN')
+				reply('「❗」WAIT BRO GUE NULIS DUMLU YAKAN')
 				buff = await getBuffer(`https://api.xteam.xyz/magernulis3?text=${laysha}&APIKEY=${XteamKey}`)
 				baby.sendMessage(from, buff, image, {quoted: mek, caption: 'Lebih baik nulis sendiri ya kak :*'})
 				break												
@@ -725,7 +725,7 @@ switch(command) {
 				var gh = body.slice(11)
 				var nin = gh.split("&")[0];
 				var ja = gh.split("&")[1];
-				if (args.length < 1) return reply(`「❗」Contoh : ${prefix}ninjalogo ISALL & Gans`)
+				if (args.length < 1) return reply(`「❗」Contoh : ${prefix}ninjalogo isall & Gans`)
 				reply(nad.wait())
 				buffer = await getBuffer(`https://api.xteam.xyz/textpro/ninjalogo?text=${nin}&text2=${ja}&APIKEY=${XteamKey}`)
 				baby.sendMessage(from, buffer, image, {quoted: mek})
@@ -748,7 +748,7 @@ switch(command) {
 				var gh = body.slice(9)
 				var porn = gh.split("&")[0];
 				var hub = gh.split("&")[1];
-				if (args.length < 1) return reply(`「❗」Contoh : ${prefix}pornhub ISALL & Hub`)
+				if (args.length < 1) return reply(`「❗」Contoh : ${prefix}pornhub isall & Hub`)
 				reply(nad.wait())
 				alan = await getBuffer(`https://vinz.zeks.xyz/api/pornhub?text1=${porn}&text2=${hub}`)
 				baby.sendMessage(from, alan, image, {quoted: mek})
@@ -773,7 +773,7 @@ switch(command) {
 					var gh = body.slice(12)
 					var gli = gh.split("&")[0];
 					var tch = gh.split("&")[1];
-					if (args.length < 1) return reply(`「❗」Contoh : ${prefix}glitchtext ISALL & Gans`)
+					if (args.length < 1) return reply(`「❗」Contoh : ${prefix}glitchtext isall & Gans`)
 					reply(nad.wait())
 					buffer = await getBuffer(`https://api.zeks.xyz/api/gtext?text1=${gli}&text2=${tch}&apikey=apivinz`)
 					baby.sendMessage(from, buffer, image, {quoted: mek})
@@ -793,7 +793,7 @@ switch(command) {
 				if (isBanned) return reply(nad.baned())
 				if (!isRegistered) return reply(nad.noregis())
 				if (isLimit(sender)) return reply(nad.limitend(pusname))
-				if (args.length < 1) return baby.sendMessage(from, 'Kode bahasanya mana kak? contoh : ${prefix}tts id Halo ISALL', text, {quoted: mek})
+				if (args.length < 1) return baby.sendMessage(from, 'Kode bahasanya mana kak? contoh : ${prefix}tts id Halo isall', text, {quoted: mek})
 					const gtts = require('./lib/gtts')(args[0])
 					if (args.length < 2) return baby.sendMessage(from, `Teksnya mana kak | contoh : ${prefix}tts id ah yamate kudasai`, text, {quoted: mek})
 					dtt = body.slice(8)
@@ -812,7 +812,7 @@ switch(command) {
 					})
 					await limitAdd(sender)
 					break
-							case 'ttp': //By isall gans 
+							case 'ttp': //By NOIR X RAMLAN ID
 							pngttp = './temp/ttp.png'
 							webpng = './temp/ttp.webp'
 							const ttptext = body.slice(5)
@@ -862,7 +862,7 @@ switch(command) {
                 var gh = body.slice(12)
 					var quote = gh.split("&")[0];
 					var wm = gh.split("&")[1];
-					const pref = `yang mau dijadiin quote apaan, titit?\n\ncontoh : ${prefix}bikinquote AKU GANS YAA & Kata ISALL`
+					const pref = `yang mau dijadiin quote apaan, titit?\n\ncontoh : ${prefix}bikinquote aku bukan boneka & Kata ISALL`
 					if (args.length < 1) return reply(pref)
 					reply(nad.wait())
 					anu = await fetchJson(`https://terhambar.com/aw/qts/?kata=${quote}&author=${wm}&tipe=random`, {method: 'get'})
@@ -1286,7 +1286,7 @@ case 'neontext':
                   if (isBanned) return reply(nad.baned())
 				if (!isRegistered) return reply(nad.noregis())
 				if (!isPrem) return reply(nad.premium())
-					if (args.length < 1) return reply(`「❗」Contoh : ${prefix}neontext ISALL`)
+					if (args.length < 1) return reply(`「❗」Contoh : ${prefix}neontext isalll`)
 					neon = body.slice(10)
 					reply('「❗」WAIT GANS')
 					anu = await getBuffer(`https://api.xteam.xyz/textpro/neon?text=$APIKEY=${XteamKey}`)
@@ -1326,7 +1326,7 @@ case 'neontext':
                 if (isBanned) return reply(nad.baned())
 				if (!isRegistered) return reply(nad.noregis())
 				if (isLimit(sender)) return reply(nad.limitend(pusname))
-				const bapak =['Wah Mantap Lu Masih Punya Bapack\nPasti Bapack Nya Kuli :v\nAwowkwokwwok\n#CandabOs','Aowkwwo Disini Ada Yteam :v\nLu Yteam Bro? Awowkwowk\nSabar Bro Ga Punya Bapack\n#Camda','Bjir Bapack Mu Ternyata Sudah Cemrai\nSedih Bro Gua Liatnya\nTapi Nih Tapi :v\nTetep Ae Lu Yteam Aowkwowkw Ngakak :v','Jangan #cekbapak Mulu Broo :v\nKasian Yang Yteam\nNtar Tersinggung Kan\nYahahaha Hayyuk By : FAISAL WAPI']
+				const bapak =['Wah Mantap Lu Masih Punya Bapack\nPasti Bapack Nya Kuli :v\nAwowkwokwwok\n#CandabOs','Aowkwwo Disini Ada Yteam :v\nLu Yteam Bro? Awowkwowk\nSabar Bro Ga Punya Bapack\n#Camda','Bjir Bapack Mu Ternyata Sudah Cemrai\nSedih Bro Gua Liatnya\nTapi Nih Tapi :v\nTetep Ae Lu Yteam Aowkwowkw Ngakak :v','Jangan #cekbapak Mulu Broo :v\nKasian Yang Yteam\nNtar Tersinggung Kan\nYahahaha Hayyuk By : isall ID']
 					const cek = bapak[Math.floor(Math.random() * bapak.length)]
 					baby.sendMessage(from, cek, text, { quoted: mek})
 					await limitAdd(sender)
@@ -1368,7 +1368,7 @@ case 'neontext':
                   if (isBanned) return reply(nad.baned())
 				if (!isRegistered) return reply(nad.noregis())
 					if (isLimit(sender)) return reply(nad.limitend(pusname))
-					if (args.length < 1) return reply(`「❗」Contoh : ${prefix}blackpink ISALL`)
+					if (args.length < 1) return reply(`「❗」Contoh : ${prefix}blackpink Isall`)
 					pink = body.slice(11)
 					reply('「❗」Hah Blekping :v')
 					lol = await getBuffer(`https://vinz.zeks.xyz/api/blackpink?text=${pink}`)
@@ -1775,7 +1775,7 @@ break
 				if ( checkATMuser(sender) >= total ) {
 					confirmATM(sender, total)
 					bayarLimit(sender, payout)
-					await reply(`*⟪ PEMBAYARAN BERHASIL ⟫*\n\n➸ pengirim : ISALL\n➸ penerima : ${pushname}\n➸ nominal pembelian : ${payout} \n➸ harga limit : ${koinPerlimit}/limit\n➸ sisa uang : ${checkATMuser(sender)}\n\nproses berhasil dengan SN\n${createSerial(15)}`)
+					await reply(`*⟪ PEMBAYARAN BERHASIL ⟫*\n\n➸ pengirim : OWNER ISALL \n➸ penerima : ${pushname}\n➸ nominal pembelian : ${payout} \n➸ harga limit : ${koinPerlimit}/limit\n➸ sisa uang : ${checkATMuser(sender)}\n\nproses berhasil dengan SN\n${createSerial(15)}`)
 				} 
 				break
 /*
@@ -1888,7 +1888,7 @@ break
                       if (isLimit(sender)) return reply(nad.limitend(pushname))
                       if (!isEventon) return reply(`maaf ${pushname} event mining tidak di aktifkan sama owner ISALL`)
                       if (isOwner) {
-                      const one = 500
+                      const one = 999999999
                       addLevelingXp(sender, one)
                       addLevelingLevel(sender, 99)
                       reply(`karena ISALL baik Bot memberikan ${one}Xp >_<`)
@@ -1971,15 +1971,15 @@ break
             case 'owner':
             case 'creator':
                   baby.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
-                  baby.sendMessage(from, 'Tuh Nomor Ownerku . JANGAN  LUPA SAVE YAA ANJING',MessageType.text, { quoted: mek} )
+                  baby.sendMessage(from, 'Tuh Nomor Owwner , jangan di chat yaa ',MessageType.text, { quoted: mek} )
 					break
 case 'hartatahta':
 if (isBanned) return reply(nad.baned())
 if (!isRegistered) return reply(nad.noregis())
 if (isLimit(sender)) return reply(nad.limitend(pusname))
-if (args.length < 1) return reply(`「❗」Contoh : ${prefix}hartatahta ISALL`)
+if (args.length < 1) return reply(`「❗」Contoh : ${prefix}hartatahta ISALL GANS`)
 har = body.slice(12)
-reply('「❗」HARTA TAHTA WAIT PROSES :v')
+reply('「❗」Hirti Tihti Tai Anjg :v')
 buffer = await getBuffer(`https://api.zeks.xyz/api/hartatahta?text=${har}&apikey=apivinz`)
 baby.sendMessage(from, buffer, image, {quoted: mek})
 await limitAdd(sender)
@@ -2003,7 +2003,7 @@ break
 					addp = body.slice(10)
 					premium.push(`${addp}@s.whatsapp.net`)
 					fs.writeFileSync('./database/user/premium.json', JSON.stringify(premium))
-					reply(`Berhasil Menambahkan ${addp} Ke Daftar Premium (TERIMA KASIH UDAH ORDER PREMIUM)`)
+					reply(`Berhasil Menambahkan ${addp} Ke Daftar Premium`)
 					break
 				case 'dellprem':
 					if (!isOwner) return reply(nad.ownerb())
@@ -2236,7 +2236,16 @@ await limitAdd(sender)
 break														
 /*
 ]=====> TQTO <=====[
-> ISALL GANS
+> RAMLAN ID
+> REVOER ID
+> ARIS ID
+> NADIA CANS
+> NAZWA
+> VHTEAR
+> TOBZ
+> XTEAM
+> MHANKBARBAR
+> All Creator Bot WhatsApp
 */				
 			if (isGroup && !isCmd && isSimi && budy != undefined) {
 						console.log(budy)
