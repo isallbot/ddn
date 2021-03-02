@@ -39,7 +39,7 @@ exports.rediregis = () => {
 }
 
 exports.stikga = () => {
-	return`*「 GAGAL 」Coba Reply ulang kak*`
+	return`*「 GAGAL 」Coba ulangi lain kali kak*`
 }
 
 exports.linkga = () => {

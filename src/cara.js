@@ -1,5 +1,5 @@
 const cara = (pushname, prefix, botName, ownerName) => { 
-	return `🔰 -----[ *BY ${botName}* ]----- 🔰
+	return `🔰 -----[ *PANDUAN PENGGUNAAN ${botName}* ]----- 🔰
 Hallo, ${pushname} 👋
 Berikut adalah cara penggunaan *${botName}*
          ────────────────
@@ -27,8 +27,12 @@ Mendownload lagu dari youtube bisa menggunakan text atau link
 Mendownload video dari youtube, gunakan link ya kak
 ➸ *${prefix}tiktod*
 Mendownload video tiktok, gunakan link kak
+➸ *${prefix}igphoto*
+Mendownload photo dari instagram, gunakan link photo kak
+➸ *${prefix}igvideo*
+Mendownload video dari instagram, gunakan link video kak
 ➸ *${prefix}hartatahta*
-Membuat lomgo, contoh : ${prefix}hartatahta Nadia
+Membuat lomgo, contoh : ${prefix}hartatahta BOTWA
 ➸ *${prefix}pornhub*
 Membuat logo, contoh : ${prefix}pornhub Ramlan & Hub
 Note : untuk logo maker / image maker jika undefined berarti harus memakai &
@@ -39,7 +43,7 @@ Gacha nomor yang ada di database / yang menggunakan bot
          ────────────────
 Note : Sisanya gunain otak kalian aja cape w jelasin :)
          ────────────────
-🔰 -----[ *TUMTOR BY ISALL ID* ]----- 🔰
+🔰 -----[ *TUMTOR BY RAMLAN ID* ]----- 🔰
 `
 }
 
